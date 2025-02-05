@@ -1,0 +1,21 @@
+<%- layout('/layouts/boilerplate') %>
+
+<body>
+    <div class="col-6 offset-3 mt-5">
+            <h4>Signin:</h4>
+        <br>
+        <form action="/login" method="POST"  class="new">    
+            <label for="#">Username</label><br>
+            <input class="mt-2 form-control" type="name" name="username" id="email" placeholder="Enter username" style="width: 100%;"/>
+            <br>
+    
+            <label for="#">Password</label><br>
+            <input class="mt-2 form-control" type="password" name="password" id="password" placeholder="Enter password" style="width: 100%;"/>
+            <br>
+            
+            <!-- btn -->
+            <button class="btn btn-success" style="background-color: #FF385C; border: none;" type="submit">Sign in</button>
+        </form>
+    </div>
+</body>
+</html>

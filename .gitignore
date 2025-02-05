@@ -1,0 +1,22 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# React/Frontend
+.cache/
+public/static/
+
+# IDEs
+.vscode/
+.idea/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# Logs
+*.log

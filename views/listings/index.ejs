@@ -1,0 +1,30 @@
+<% layout('layouts/boilerplate.ejs') %>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <body>
+        <h3 class="heading-margin">All Listings</h3>
+        <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 listing-row">
+            <% for (let list of allListings) { %>
+                <div class="card col listing-card index-listing-card">
+                    <a href="/listings/<%= list._id %>">
+                        <div class="img-div">
+                            <img src="<%= list.image.url %>" class="card-img-top " alt="listings_image">
+                        </div>
+                        <!-- <div class="card-img-overlay"></div> -->
+                        <div class="card-body">
+                            <p class="card-title"><b>
+                                    <%= list.title %>
+                                </b></p>
+                            <p class="card-price">&#36;<%= list.price.toLocaleString('en-US') %>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <% } %>
+        </div>
+    </body>

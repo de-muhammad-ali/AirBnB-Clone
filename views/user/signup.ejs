@@ -1,0 +1,25 @@
+<%- layout('/layouts/boilerplate.ejs') %>
+<body>
+    
+    <div class=" mt-3 col-6 offset-3">
+        <h4>SignUp:</h4>
+        <br>
+        <form action="/signup" method="POST" >
+            <label for="#">Username</label>
+            <input class="mt-2 form-control" type="text" name="user[username]" id="username" placeholder="Enter username" style="width: 100%; "/>
+            <br>
+    
+            <label for="#">Email</label><br>
+            <input class="mt-2 form-control" type="email" name="user[email]" id="email" placeholder="Enter email" style="width: 100%;"/>
+            <br>
+    
+            <label for="#">Password</label><br>
+            <input class="mt-2 form-control" type="password" name="user[password]" id="password" placeholder="Enter password" style="width: 100%;"/>
+            <br>
+            
+            <!-- btn -->
+            <button class="btn btn-success" style=" background-color: #FF385C ; border: none;">SignUp</button>
+        </form>
+    </div>
+</body>
+</html>
