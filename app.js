@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, '/public')))
 
 //Session Opt
 const sessionOptions = {
-    secret: 'mysupersecretcode',
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -65,7 +65,7 @@ passport.deserializeUser(User.deserializeUser());
 
 
 //Mongo Connection
-main('mongodb://127.0.0.1:27017/wanderlust-second')
+main(process.env.MONGO_URL)
     .then((res) => {
         console.log('db connection was initailized')
     })
